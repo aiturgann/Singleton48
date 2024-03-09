@@ -13,6 +13,9 @@
 		1D437F782B9B04630025128C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D437F762B9B04630025128C /* Main.storyboard */; };
 		1D437F7A2B9B04640025128C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D437F792B9B04640025128C /* Assets.xcassets */; };
 		1D437F7D2B9B04640025128C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D437F7B2B9B04640025128C /* LaunchScreen.storyboard */; };
+		1D437F862B9B04AA0025128C /* MakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D437F852B9B04AA0025128C /* MakerView.swift */; };
+		1D437F8B2B9CC55F0025128C /* GreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D437F8A2B9CC55F0025128C /* GreenViewController.swift */; };
+		1D437F8E2B9CD15C0025128C /* ValidateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D437F8D2B9CD15C0025128C /* ValidateProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		1D437F792B9B04640025128C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D437F7C2B9B04640025128C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1D437F7E2B9B04640025128C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D437F852B9B04AA0025128C /* MakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakerView.swift; sourceTree = "<group>"; };
+		1D437F8A2B9CC55F0025128C /* GreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenViewController.swift; sourceTree = "<group>"; };
+		1D437F8D2B9CD15C0025128C /* ValidateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		1D437F6F2B9B04630025128C /* Singleton48 */ = {
 			isa = PBXGroup;
 			children = (
-				1D437F702B9B04630025128C /* AppDelegate.swift */,
-				1D437F722B9B04630025128C /* SceneDelegate.swift */,
-				1D437F742B9B04630025128C /* ViewController.swift */,
-				1D437F762B9B04630025128C /* Main.storyboard */,
-				1D437F792B9B04640025128C /* Assets.xcassets */,
-				1D437F7B2B9B04640025128C /* LaunchScreen.storyboard */,
+				1D437F872B9B04CC0025128C /* Delegates */,
+				1D437F892B9B05000025128C /* VC */,
+				1D437F8C2B9CD13B0025128C /* Protocol */,
+				1D437F842B9B04970025128C /* MakerView */,
+				1D437F882B9B04E20025128C /* Resources */,
 				1D437F7E2B9B04640025128C /* Info.plist */,
 			);
 			path = Singleton48;
+			sourceTree = "<group>";
+		};
+		1D437F842B9B04970025128C /* MakerView */ = {
+			isa = PBXGroup;
+			children = (
+				1D437F852B9B04AA0025128C /* MakerView.swift */,
+			);
+			path = MakerView;
+			sourceTree = "<group>";
+		};
+		1D437F872B9B04CC0025128C /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1D437F702B9B04630025128C /* AppDelegate.swift */,
+				1D437F722B9B04630025128C /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		1D437F882B9B04E20025128C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D437F762B9B04630025128C /* Main.storyboard */,
+				1D437F792B9B04640025128C /* Assets.xcassets */,
+				1D437F7B2B9B04640025128C /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1D437F892B9B05000025128C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				1D437F742B9B04630025128C /* ViewController.swift */,
+				1D437F8A2B9CC55F0025128C /* GreenViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		1D437F8C2B9CD13B0025128C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1D437F8D2B9CD15C0025128C /* ValidateProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +188,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D437F752B9B04630025128C /* ViewController.swift in Sources */,
+				1D437F862B9B04AA0025128C /* MakerView.swift in Sources */,
 				1D437F712B9B04630025128C /* AppDelegate.swift in Sources */,
 				1D437F732B9B04630025128C /* SceneDelegate.swift in Sources */,
+				1D437F8B2B9CC55F0025128C /* GreenViewController.swift in Sources */,
+				1D437F8E2B9CD15C0025128C /* ValidateProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +270,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +327,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
