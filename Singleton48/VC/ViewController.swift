@@ -76,13 +76,6 @@ class ViewController: UIViewController, ValidateProtocol {
              questionLabel.heightAnchor.constraint(equalToConstant: 60)
             ])
         
-//        view.addSubview(answerTF)
-//        NSLayoutConstraint.activate(
-//            [answerTF.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 20),
-//             answerTF.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-//             answerTF.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-//             answerTF.heightAnchor.constraint(equalToConstant: 60)
-//            ])
         
         view.addSubview(horizontalStack)
         NSLayoutConstraint.activate(
@@ -131,44 +124,6 @@ class ViewController: UIViewController, ValidateProtocol {
 
     }
     
-//    @objc private func firstBtnTppd(button: UIButton) {
-//        guard let text = button.currentTitle else {return}
-//        
-//        validateButtton(brand: text, pressedButton: firstButton)
-//    }
-//    
-//    @objc private func secondBtnTppd(button: UIButton) {
-//        guard let text = button.currentTitle else {return}
-//        
-//        validateButtton(brand: text, pressedButton: secondButton)
-//    }
-//    
-//    @objc private func thirdBtnTppd(button: UIButton) {
-//        guard let text = button.currentTitle else {return}
-//        
-//        validateButtton(brand: text, pressedButton: thirdButton)
-//        
-//        let vc = GreenViewController()
-//        navigationController?.pushViewController(vc, animated: true)
-//    }
-//    
-//    @objc private func fourthBtnTppd(button: UIButton) {
-//        guard let text = button.currentTitle else {return}
-//        
-//        validateButtton(brand: text, pressedButton: fourthButton)
-//    }
-//    
-//    @objc private func fifthBtnTppd(button: UIButton) {
-//        guard let text = button.currentTitle else {return}
-//        
-//        validateButtton(brand: text, pressedButton: fifthButton)
-//    }
-//    
-//    @objc private func sixthBtnTppd(button: UIButton) {
-//        guard let text = button.currentTitle else {return}
-//        
-//        validateButtton(brand: text, pressedButton: sixthButton)
-//    }
     
     @objc private func checkButton(button: UIButton) {
         guard let text = button.currentTitle else {return}
@@ -176,17 +131,23 @@ class ViewController: UIViewController, ValidateProtocol {
         switch button.tag {
         case 1:
             validateButtton(brand: text, button: firstButton)
+            returnColor(tappedButton: firstButton)
         case 2:
             validateButtton(brand: text, button: secondButton)
+            returnColor(tappedButton: secondButton)
         case 3:
             validateButtton(brand: text, button: thirdButton)
             nextScreen()
+            returnColor(tappedButton: thirdButton)
         case 4:
             validateButtton(brand: text, button: fourthButton)
+            returnColor(tappedButton: fourthButton)
         case 5:
             validateButtton(brand: text, button: fifthButton)
+            returnColor(tappedButton: fifthButton)
         case 6:
             validateButtton(brand: text, button: sixthButton)
+            returnColor(tappedButton: sixthButton)
         default: print("default")
         }
         
@@ -196,6 +157,34 @@ class ViewController: UIViewController, ValidateProtocol {
     private func nextScreen() {
         let vc = GreenViewController()
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func returnColor(tappedButton: UIButton) {
+        
+        if(firstButton != tappedButton) {
+            firstButton.backgroundColor = .magenta
+        }
+        
+        if(secondButton != tappedButton) {
+            secondButton.backgroundColor = .magenta
+        }
+        
+        if(thirdButton != tappedButton) {
+            thirdButton.backgroundColor = .magenta
+        }
+        
+        if(fourthButton != tappedButton) {
+            fourthButton.backgroundColor = .magenta
+        }
+
+        if(fifthButton != tappedButton) {
+            fifthButton.backgroundColor = .magenta
+        }
+        
+        if(sixthButton != tappedButton) {
+            sixthButton.backgroundColor = .magenta
+        }
+
     }
 
 }
